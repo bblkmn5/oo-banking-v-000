@@ -7,4 +7,10 @@ class Transfer
     @status = status
     @amount = amount
   end
+
+  def valid?
+    if sender != nil && receiver != nil
+      true
+    end
+  end
 end
