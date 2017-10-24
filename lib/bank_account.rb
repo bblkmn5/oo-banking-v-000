@@ -5,10 +5,10 @@ class BankAccount
   attr_accessor :balance, :status
 
 #initializes with a name, always with a balance of 1000, and always with a status of "open"
-  def initialize(name, balance = 1000, status = "open")
+  def initialize(name)
     @name = name
-    @balance = balance
-    @status = status
+    @balance = 1000
+    @status = "open"
   end
 
 #can deposit money into its account
