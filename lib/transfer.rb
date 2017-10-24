@@ -24,7 +24,7 @@ class Transfer
       sender.balance -= amount
       self.status = "complete"
     else
-#rejects a transfer if the sender doesn
+#rejects a transfer if the sender doesn't have a valid account
       reject_transfer
     end
   end
@@ -37,6 +37,7 @@ class Transfer
       sender.balance += amount
       self.status = "reversed"
     else
+#rejects a transfer if an account isn't valid
       reject_transfer
     end
   end
