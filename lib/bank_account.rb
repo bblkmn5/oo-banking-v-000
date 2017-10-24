@@ -11,11 +11,11 @@ class BankAccount
   end
 
   def deposit(money)
-    balance = balance + money
+    balance = (balance + money)
   end
 
   def display_balance
-    "Your balance is #{self.balance}."
+    "Your balance is $#{self.balance}."
   end
 
   def valid?
