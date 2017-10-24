@@ -9,7 +9,7 @@ class Transfer
   end
 
   def valid?
-    if sender != nil && receiver != nil
+    if self.sender != nil && self.receiver != nil
       true
     end
   end
@@ -31,6 +31,5 @@ class Transfer
       self.status = "reversed"
     end
   end
-
 
 end
