@@ -21,6 +21,7 @@ class BankAccount
     "Your balance is $#{self.balance}."
   end
 
+#is valid with open status and a balance greater than 0
   def valid?
     if status != "open" || balance == 0
       false
