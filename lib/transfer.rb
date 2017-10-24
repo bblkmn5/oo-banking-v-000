@@ -29,7 +29,8 @@ class Transfer
       receiver.bank_account.balance = (receiver.bank_account.balance - amount)
       sender.bank_account.balance = (sender.bank_account.balance + amount)
       self.status = "reversed"
-    else
-      
+    end
+  end
+
 
 end
