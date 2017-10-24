@@ -41,6 +41,7 @@ class Transfer
     end
   end
 
+#create #reject_transfer for easier readability and more widespread use
   def reject_transfer
     self.status = "rejected"
     "Transaction rejected. Please check your account balance."
