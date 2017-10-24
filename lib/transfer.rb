@@ -1,15 +1,15 @@
 class Transfer
-
-  attr_accessor :sender, :receiver, :status, :amount
-  def initialize(sender, receiver, status = "pending", amount)
+  attr_reader :amount, :sender, :receiver
+  attr_accessor :status
+  def initialize(sender, receiver, amount)
     @sender = sender
     @receiver = receiver
-    @status = status
+    @status = "pending"
     @amount = amount
   end
 
   def valid?
-    if self.sender != nil && self.receiver != nil
+    if sender != nil && receiver != nil
       true
     end
   end
@@ -19,7 +19,7 @@ class Transfer
       return "Transaction rejected. Please check your account balance."
     else
       receiver.bank_account.balance = (receiver.bank_acount.balance + amount)
-      sender.BankAccount.balance = (sender.bank_account.balance - amount)
+      sender.bank_account.balance = (sender.bank_account.balance - amount)
       self.status = "complete"
     end
   end
