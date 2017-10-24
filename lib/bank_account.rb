@@ -11,10 +11,12 @@ class BankAccount
     @status = status
   end
 
+#can deposit money into its account
   def deposit(money)
     self.balance = (self.balance + money)
   end
 
+#can display its balance
   def display_balance
     "Your balance is $#{self.balance}."
   end
