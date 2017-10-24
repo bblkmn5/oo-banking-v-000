@@ -12,7 +12,9 @@ class BankAccount
 
   def deposit(money)
     balance = balance + money
-    balance
   end
+
+  def display_balance
+    "Your balance is #{self.balance}."
 
 end
